@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar CEP</title>
+    <link rel="icon" type="image/png" href="mapaicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="title">Busca CEP e Localidade</h1>
+    
+    <div id="container">
+        <h2>Buscar Local pelo CEP</h2>
+        <input type="text" id="cepInput" placeholder="Digite o CEP">
+        <button onclick="buscarCep()">Buscar Local</button>
+        
+        <h2>Buscar CEP pelo Endereço</h2>
+        <!-- Picker para o estado (UF) -->
+        <select id="ufInput">
+            <option value="">Selecione o Estado (UF)</option>
+            <option value="AC">Acre (AC)</option>
+            <option value="AL">Alagoas (AL)</option>
+            <option value="AP">Amapá (AP)</option>
+            <option value="AM">Amazonas (AM)</option>
+            <option value="BA">Bahia (BA)</option>
+            <option value="CE">Ceará (CE)</option>
+            <option value="DF">Distrito Federal (DF)</option>
+            <option value="ES">Espírito Santo (ES)</option>
+            <option value="GO">Goiás (GO)</option>
+            <option value="MA">Maranhão (MA)</option>
+            <option value="MT">Mato Grosso (MT)</option>
+            <option value="MS">Mato Grosso do Sul (MS)</option>
+            <option value="MG">Minas Gerais (MG)</option>
+            <option value="PA">Pará (PA)</option>
+            <option value="PB">Paraíba (PB)</option>
+            <option value="PR">Paraná (PR)</option>
+            <option value="PE">Pernambuco (PE)</option>
+            <option value="PI">Piauí (PI)</option>
+            <option value="RJ">Rio de Janeiro (RJ)</option>
+            <option value="RN">Rio Grande do Norte (RN)</option>
+            <option value="RS">Rio Grande do Sul (RS)</option>
+            <option value="RO">Rondônia (RO)</option>
+            <option value="RR">Roraima (RR)</option>
+            <option value="SC">Santa Catarina (SC)</option>
+            <option value="SP">São Paulo (SP)</option>
+            <option value="SE">Sergipe (SE)</option>
+            <option value="TO">Tocantins (TO)</option>
+        </select>
+        <input type="text" id="localidadeInput" placeholder="Cidade">
+        <input type="text" id="logradouroInput" placeholder="Logradouro (Rua)">
+        <button onclick="buscarCepPorEndereco()">Buscar CEP</button>
+
+        <h2>Resultado da Busca:</h2>
+        <div id="resultado"></div>
+        
+        <h2>Histórico de Buscas:</h2>
+        <ul id="historico"></ul>
+        
+        <button onclick="limparHistorico()">Limpar Histórico</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
